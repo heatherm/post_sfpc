@@ -6,42 +6,38 @@ float linePosition = 0;
 
 void setup(){
   size(500, 500);
-  background(0);
   stroke(255);
 }
 
 void draw(){
   background(0);
+  translate(width/2, height/2);
+  int diameter = 10;
+  float widthOverTime = sin(linePosition) + 1;
+  float placeOnLine = widthOverTime * lineLength/2;
   
   for (int i=0; i < numLines; i++){
     int angle = (360/numLines)*i;
     float rads = radians(angle);
-
-    line(
-      getX(innerRadius, rads),
-      getY(innerRadius, rads),
-      getX(outerRadius, rads),
-      getY(outerRadius, rads)
-    );
-    
+    pushMatrix();
+    rotate(rads);
+    line(0,innerRadius, 0, lineLength+innerRadius);
     fill(255);
-    int diameter = 10;
-    float placeOnLine = (sin(linePosition) + 1) * lineLength/2;
-    ellipse(
-      getX(innerRadius + placeOnLine, rads), 
-      getY(innerRadius + placeOnLine, rads), 
-      diameter, 
-      diameter
-    );
+    ellipse(0, innerRadius+placeOnLine, diameter + (diameter/2)*widthOverTime, diameter);
+    popMatrix();
+  }
+
+  noFill();
+  int circlePlace = 350;
+  stroke(0,0,0,100);
+  for (int i=circlePlace-100; i < circlePlace+50; i++){
+      ellipse(0,0,i,i);
   }
   
-  linePosition += 0.02; 
-}
+  stroke(255,255,255,500);
+  for (int i=circlePlace; i < circlePlace+10; i++){
+      ellipse(0,0,i,i);
+  }
 
-float getX(float radius, float angle){
-   return width/2 + radius * cos(angle);
-}
-
-float getY(float radius, float angle){
-  return height/2 + radius * sin(angle);
+  linePosition += 0.04; 
 }
