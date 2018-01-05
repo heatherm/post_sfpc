@@ -6,11 +6,11 @@ float linePosition = 0;
 
 void setup(){
   size(500, 500);
-  stroke(255);
 }
 
 void draw(){
   background(0);
+
   translate(width/2, height/2);
   int diameter = 10;
   float widthOverTime = sin(linePosition) + 1;
@@ -20,10 +20,20 @@ void draw(){
     int angle = (360/numLines)*i;
     float rads = radians(angle);
     pushMatrix();
+    stroke(125);
+    strokeWeight(2);
     rotate(rads);
     line(0,innerRadius, 0, lineLength+innerRadius);
+    
+    stroke(255);
+    strokeWeight(1);
     fill(255);
-    ellipse(0, innerRadius+placeOnLine, diameter + (diameter/2)*widthOverTime, diameter);
+    ellipse(
+      0, 
+      innerRadius+placeOnLine, 
+      diameter + (diameter/2)*widthOverTime, 
+      diameter
+    );
     popMatrix();
   }
 
