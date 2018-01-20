@@ -5,7 +5,7 @@ int numLines = 40;
 float linePosition = 0;
 
 void setup(){
-  size(500, 500);
+  size(500, 500, P3D);
 }
 
 void draw(){
@@ -30,6 +30,9 @@ void draw(){
     float x = abs(10.0 - (i  - 10.0)) / 20.0;
     float perlin = x * x * x * (x * ( x * 6 -15) + 10);
     float result = innerRadius+(perlin*lineLength);
+    if (i > 0 && i < 20){
+      translate(0,0,1);
+    }
     ellipse(
       0, 
       result,
@@ -52,5 +55,5 @@ void draw(){
       ellipse(0,0,i,i);
   }
 
-  linePosition += 0.8; 
+  linePosition += 0.22; 
 }
