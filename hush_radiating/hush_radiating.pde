@@ -13,11 +13,10 @@ void draw(){
 
   translate(width/2, height/2);
   int diameter = 10;
-  float widthOverTime = sin(linePosition) + 1;
-  float placeOnLine = widthOverTime * lineLength/2;
   
   for (int i=0; i < numLines; i++){
-    int angle = (360/numLines)*i;
+    int z = floor((i + linePosition)) % numLines;
+    int angle = (360/numLines)*z;
     float rads = radians(angle);
     pushMatrix();
     stroke(125);
@@ -28,12 +27,16 @@ void draw(){
     stroke(255);
     strokeWeight(1);
     fill(255);
+    float x = abs(10.0 - (i  - 10.0)) / 20.0;
+    float perlin = x * x * x * (x * ( x * 6 -15) + 10);
+    float result = innerRadius+(perlin*lineLength);
     ellipse(
       0, 
-      innerRadius+placeOnLine, 
-      diameter + (diameter/2)*widthOverTime, 
-      diameter
+      result,
+      diameter * (2 * (perlin + .5)), 
+      diameter * (1.5 * (perlin + .5))
     );
+    
     popMatrix();
   }
 
@@ -49,5 +52,5 @@ void draw(){
       ellipse(0,0,i,i);
   }
 
-  linePosition += 0.04; 
+  linePosition += 0.8; 
 }
