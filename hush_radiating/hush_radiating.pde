@@ -15,8 +15,8 @@ void draw(){
   int diameter = 10;
   
   for (int i=0; i < numLines; i++){
-    int z = floor((i + linePosition)) % numLines;
-    int angle = (360/numLines)*z;
+    float zz = (i + linePosition) % numLines;
+    int angle = (360/numLines)*i;
     float rads = radians(angle);
     pushMatrix();
     stroke(125);
@@ -27,10 +27,12 @@ void draw(){
     stroke(255);
     strokeWeight(1);
     fill(255);
-    float x = abs(10.0 - (i  - 10.0)) / 20.0;
-    float perlin = x * x * x * (x * ( x * 6 -15) + 10);
+    float t = zz % (numLines/4);
+    float x = abs(2.5 - (t  - 2.5)) / 5.0;
+    //float perlin = x * x * x * (x * ( x * 6 -15) + 10);
+    float perlin = cos(PI * x) * cos(PI * x); 
     float result = innerRadius+(perlin*lineLength);
-    if (i > 0 && i < 20){
+    if (t > 0 && t < 5){
       translate(0,0,1);
     }
     ellipse(
@@ -55,5 +57,5 @@ void draw(){
       ellipse(0,0,i,i);
   }
 
-  linePosition += 0.22; 
+  linePosition += 0.02; 
 }
