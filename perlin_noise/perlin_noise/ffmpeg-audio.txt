@@ -1,0 +1,72 @@
+ffmpeg version 3.4 Copyright (c) 2000-2017 the FFmpeg developers
+  built with Apple LLVM version 9.0.0 (clang-900.0.38)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/3.4 --enable-shared --enable-pthreads --enable-version3 --enable-hardcoded-tables --enable-avresample --cc=clang --host-cflags= --host-ldflags= --enable-gpl --enable-libmp3lame --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libxvid --enable-opencl --enable-videotoolbox --disable-lzma
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/heathermoore/Code/post_sfpc/perlin_noise/perlin_noise/circle_deep.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf57.83.100
+    comment         : Exported using https://github.com/hamoid/VideoExport-for-Processing
+  Duration: 00:00:20.05, start: 0.000000, bitrate: 1571 kb/s
+    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 500x500, 1566 kb/s, 60 fps, 60 tbr, 15360 tbn, 120 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+Input #1, mp3, from '/Users/heathermoore/Code/post_sfpc/perlin_noise/perlin_noise/data/deep.mp3':
+  Metadata:
+    major_brand     : M4A 
+    minor_version   : 0
+    compatible_brands: M4A mp42isom
+    purchase_date   : 2016-01-24 03:33:55
+    iTunSMPB        :  00000000 00000840 000001FE 00000000008BE1C2 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+    iTunNORM        :  0000045C 00000415 00003F27 0000336E 0003073D 00008783 000074D1 000074CF 00010451 00010451
+    title           : Deep
+    artist          : Marian Hill
+    album_artist    : Marian Hill
+    composer        : Jeremy Lloyd & Samantha Lee Gongol
+    album           : Sway
+    genre           : Alternative
+    track           : 6/7
+    disc            : 1/1
+    date            : 2015
+    compilation     : 0
+    account_id      : alivevila@hotmail.com
+    media_type      : 1
+    encoder         : Lavf57.83.100
+  Duration: 00:03:27.93, start: 0.025056, bitrate: 141 kb/s
+    Stream #1:0: Audio: mp3, 44100 Hz, stereo, s16p, 128 kb/s
+    Metadata:
+      encoder         : Lavc57.10
+    Stream #1:1: Video: png, rgb24(pc), 600x600 [SAR 1:1 DAR 1:1], 90k tbr, 90k tbn, 90k tbc
+    Metadata:
+      comment         : Other
+Stream mapping:
+  Stream #1:0 (mp3) -> apad
+  apad -> Stream #0:0 (aac)
+  Stream #0:0 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+Output #0, mp4, to '/Users/heathermoore/Code/post_sfpc/perlin_noise/perlin_noise/temp-with-audio.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    comment         : Exported using https://github.com/hamoid/VideoExport-for-Processing
+    encoder         : Lavf57.83.100
+    Stream #0:0: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 aac
+    Stream #0:1(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 500x500, q=2-31, 1566 kb/s, 60 fps, 60 tbr, 15360 tbn, 15360 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+frame=  785 fps=0.0 q=-1.0 size=    3072kB time=00:00:13.04 bitrate=1928.5kbits/s speed=26.1x    frame= 1203 fps=0.0 q=-1.0 Lsize=    4183kB time=00:00:20.03 bitrate=1710.0kbits/s speed=  26x    
+video:3834kB audio:317kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.775869%
+[aac @ 0x7f849c81b400] Qavg: 1337.980
