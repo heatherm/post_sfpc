@@ -17,8 +17,8 @@ Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/heathermoore/Code/post_sfpc/perl
     compatible_brands: isomiso2avc1mp41
     encoder         : Lavf57.83.100
     comment         : Exported using https://github.com/hamoid/VideoExport-for-Processing
-  Duration: 00:00:20.05, start: 0.000000, bitrate: 1571 kb/s
-    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 500x500, 1566 kb/s, 60 fps, 60 tbr, 15360 tbn, 120 tbc (default)
+  Duration: 00:00:06.77, start: 0.000000, bitrate: 1522 kb/s
+    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 500x500, 1518 kb/s, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
     Metadata:
       handler_name    : VideoHandler
 Input #1, mp3, from '/Users/heathermoore/Code/post_sfpc/perlin_noise/perlin_noise/data/deep.mp3':
@@ -64,9 +64,9 @@ Output #0, mp4, to '/Users/heathermoore/Code/post_sfpc/perlin_noise/perlin_noise
     Stream #0:0: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
     Metadata:
       encoder         : Lavc57.107.100 aac
-    Stream #0:1(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 500x500, q=2-31, 1566 kb/s, 60 fps, 60 tbr, 15360 tbn, 15360 tbc (default)
+    Stream #0:1(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 500x500, q=2-31, 1518 kb/s, 30 fps, 30 tbr, 15360 tbn, 15360 tbc (default)
     Metadata:
       handler_name    : VideoHandler
-frame=  785 fps=0.0 q=-1.0 size=    3072kB time=00:00:13.04 bitrate=1928.5kbits/s speed=26.1x    frame= 1203 fps=0.0 q=-1.0 Lsize=    4183kB time=00:00:20.03 bitrate=1710.0kbits/s speed=  26x    
-video:3834kB audio:317kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.775869%
-[aac @ 0x7f849c81b400] Qavg: 1337.980
+frame=  203 fps=0.0 q=-1.0 Lsize=    1366kB time=00:00:06.71 bitrate=1667.9kbits/s speed=27.8x    
+video:1254kB audio:103kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.622241%
+[aac @ 0x7fc9b9003400] Qavg: 2863.098
