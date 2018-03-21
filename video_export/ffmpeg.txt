@@ -1,0 +1,51 @@
+ffmpeg version 3.4 Copyright (c) 2000-2017 the FFmpeg developers
+  built with Apple LLVM version 9.0.0 (clang-900.0.38)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/3.4 --enable-shared --enable-pthreads --enable-version3 --enable-hardcoded-tables --enable-avresample --cc=clang --host-cflags= --host-ldflags= --enable-gpl --enable-libmp3lame --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libxvid --enable-opencl --enable-videotoolbox --disable-lzma
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, rawvideo, from 'pipe:':
+  Duration: N/A, start: 0.000000, bitrate: 259200 kb/s
+    Stream #0:0: Video: rawvideo (RGB[24] / 0x18424752), rgb24, 600x600, 259200 kb/s, 30 tbr, 30 tbn, 30 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (rawvideo (native) -> h264 (libx264))
+[swscaler @ 0x7fea0d000600] Warning: data is not aligned! This can lead to a speed loss
+[libx264 @ 0x7fea0c809200] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0x7fea0c809200] profile High, level 3.1
+[libx264 @ 0x7fea0c809200] 264 - core 148 r2795 aaa9aa8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=15.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/Users/heathermoore/Code/post_sfpc/video_export/processing-movie.mp4':
+  Metadata:
+    comment         : Exported using https://github.com/hamoid/VideoExport-for-Processing
+    encoder         : Lavf57.83.100
+    Stream #0:0: Video: h264 (libx264) (avc1 / 0x31637661), yuv420p, 600x600, q=-1--1, 30 fps, 15360 tbn, 30 tbc
+    Metadata:
+      encoder         : Lavc57.107.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: -1
+frame=   44 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   82 fps= 81 q=21.0 size=       0kB time=00:00:00.76 bitrate=   0.5kbits/s speed=0.759x    frame=  123 fps= 81 q=21.0 size=       0kB time=00:00:02.13 bitrate=   0.2kbits/s speed=1.41x    frame=  164 fps= 81 q=21.0 size=     256kB time=00:00:03.50 bitrate= 599.3kbits/s speed=1.74x    frame=  205 fps= 81 q=21.0 size=     256kB time=00:00:04.86 bitrate= 431.0kbits/s speed=1.92x    frame=  245 fps= 81 q=21.0 size=     512kB time=00:00:06.20 bitrate= 676.6kbits/s speed=2.04x    frame=  255 fps= 79 q=-1.0 Lsize=     729kB time=00:00:08.40 bitrate= 711.4kbits/s speed=2.59x    
+video:726kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.517272%
+[libx264 @ 0x7fea0c809200] frame I:5     Avg QP: 2.63  size: 10411
+[libx264 @ 0x7fea0c809200] frame P:80    Avg QP:12.51  size:  4393
+[libx264 @ 0x7fea0c809200] frame B:170   Avg QP:16.13  size:  1994
+[libx264 @ 0x7fea0c809200] consecutive B-frames:  6.7%  7.8% 16.5% 69.0%
+[libx264 @ 0x7fea0c809200] mb I  I16..4: 90.1%  0.1%  9.8%
+[libx264 @ 0x7fea0c809200] mb P  I16..4:  2.6%  1.7%  2.5%  P16..4:  3.0%  1.8%  1.7%  0.0%  0.0%    skip:86.7%
+[libx264 @ 0x7fea0c809200] mb B  I16..4:  0.1%  0.3%  0.4%  B16..8:  5.8%  2.0%  1.3%  direct: 0.5%  skip:89.5%  L0:49.1% L1:46.5% BI: 4.4%
+[libx264 @ 0x7fea0c809200] 8x8 transform intra:15.4% inter:6.4%
+[libx264 @ 0x7fea0c809200] coded y,uvDC,uvAC intra: 16.6% 29.5% 28.9% inter: 1.6% 4.1% 4.0%
+[libx264 @ 0x7fea0c809200] i16 v,h,dc,p: 94%  3%  3%  0%
+[libx264 @ 0x7fea0c809200] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu:  6%  3% 90%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x7fea0c809200] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 18% 16% 41%  6%  5%  4%  4%  3%  3%
+[libx264 @ 0x7fea0c809200] i8c dc,h,v,p: 82%  9%  7%  2%
+[libx264 @ 0x7fea0c809200] Weighted P-Frames: Y:3.8% UV:2.5%
+[libx264 @ 0x7fea0c809200] ref P L0: 62.5%  3.8% 21.7% 11.9%  0.0%
+[libx264 @ 0x7fea0c809200] ref B L0: 74.7% 20.8%  4.5%
+[libx264 @ 0x7fea0c809200] ref B L1: 91.2%  8.8%
+[libx264 @ 0x7fea0c809200] kb/s:698.77
+Exiting normally, received signal 15.
