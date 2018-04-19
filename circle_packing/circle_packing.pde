@@ -35,7 +35,7 @@ class Circle {
 ArrayList<Circle> circles;
 
 void setup(){
-  size(640,360);
+  size(500,500, P3D);
   circles = new ArrayList<Circle>();
 }
 
@@ -54,7 +54,7 @@ void draw(){
       count++;
     } 
     attempts++;
-    if (attempts > 40){
+    if (attempts > 60){
       noLoop();
       println("done");
       break;
