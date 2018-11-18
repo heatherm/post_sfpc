@@ -16,9 +16,9 @@ Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/heathermoore/Code/post_sfpc/perl
     minor_version   : 512
     compatible_brands: isomiso2avc1mp41
     encoder         : Lavf57.83.100
-    comment         : Exported using https://github.com/hamoid/VideoExport-for-Processing
-  Duration: 00:00:13.97, start: 0.000000, bitrate: 71 kb/s
-    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 512x512, 67 kb/s, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    comment         : Made with Video Export for Processing - https://git.io/vAXLk
+  Duration: 00:00:01.07, start: 0.000000, bitrate: 1746 kb/s
+    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 500x500, 1737 kb/s, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
     Metadata:
       handler_name    : VideoHandler
 Input #1, mp3, from '/Users/heathermoore/Code/post_sfpc/perlin_noise/perlin_noise/data/deep.mp3':
@@ -59,14 +59,14 @@ Output #0, mp4, to '/Users/heathermoore/Code/post_sfpc/perlin_noise/perlin_noise
     major_brand     : isom
     minor_version   : 512
     compatible_brands: isomiso2avc1mp41
-    comment         : Exported using https://github.com/hamoid/VideoExport-for-Processing
+    comment         : Made with Video Export for Processing - https://git.io/vAXLk
     encoder         : Lavf57.83.100
     Stream #0:0: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
     Metadata:
       encoder         : Lavc57.107.100 aac
-    Stream #0:1(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 512x512, q=2-31, 67 kb/s, 30 fps, 30 tbr, 15360 tbn, 15360 tbc (default)
+    Stream #0:1(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 500x500, q=2-31, 1737 kb/s, 30 fps, 30 tbr, 15360 tbn, 15360 tbc (default)
     Metadata:
       handler_name    : VideoHandler
-frame=  400 fps=0.0 q=-1.0 size=     256kB time=00:00:13.23 bitrate= 158.5kbits/s speed=26.5x    frame=  419 fps=0.0 q=-1.0 Lsize=     351kB time=00:00:13.90 bitrate= 206.9kbits/s speed=25.6x    
-video:116kB audio:220kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.784555%
-[aac @ 0x7ffd6880ba00] Qavg: 1649.032
+frame=   32 fps=0.0 q=-1.0 Lsize=     242kB time=00:00:00.99 bitrate=1986.4kbits/s speed=20.1x    
+video:226kB audio:13kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 1.005899%
+[aac @ 0x7fd917009400] Qavg: 15222.619
